@@ -1,0 +1,335 @@
+
+
+/* r-container----------------------------------------------------- */
+.r-container{
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+
+
+/* width----------------------------------------------------- */
+.w-60{
+    width: 60%;
+}
+.w-65{
+    width: 65%;
+}
+.w-70{
+    width: 70%;
+}
+.w-90{
+    width: 90%;
+}
+/* height----------------------------------------------------- */
+.h-60{
+    height: 60%;
+}
+.h-90{
+    height: 90%;
+} 
+.h-95 {
+    height: 95% !important;
+}
+
+/* font------------------------------------------------------- */
+.fw-medium{
+    font-weight: 500 !important;
+    font-style: medium;
+}
+
+/* border-radius------------------------------------------------- */
+.rounded-10{
+    border-radius: 10px;
+}
+.rounded-20{
+    border-radius: 20px;
+}
+.rounded-30{
+    border-radius: 30px;
+}
+
+
+/* paragraph--------------------------------------------------- */
+p{
+    margin: 0;
+}
+
+
+/* zindex----------------------------------------------------- */
+.zindex-2 {
+    z-index: -2;
+}
+
+.zindex-1 {
+    z-index: -1;
+}
+
+.zindex1 {
+    z-index: 1;
+}
+
+.zindex2 {
+    z-index: 2;
+}
+
+.zindex3 {
+    z-index: 3;
+}
+
+/* position-------------------------------------------------------- */
+.inset-0 {
+    inset : 0;
+}
+
+
+/* font weight-------------------------------------------------------- */
+.fw-semibold {
+    font-weight: 600
+}
+
+/* img-------------------------------------------------------- */
+.my-img-fluid {
+    max-height: 100%;
+    min-width : 100%;
+    min-height: 100%;
+}
+
+.my-img-fluid-centered {
+    max-height: 100%;
+    min-width : 100%;
+    min-height: 100%;
+    margin-left: 50%;
+    object-fit : cover;
+    transform  : translateX(-50%);
+}
+
+/* cursor-------------------------------------------------------- */
+.c-pointer {
+    cursor: pointer;
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .login-wrap {
+        width: 100% !important;
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .login-wrap {
+        width: 450px;
+    }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* // XX-Large devices (larger desktops) */
+/* // No media query since the xxl breakpoint has no upper bound on its width */
+
+
+
+/* position-------------------------------------------------------- */
+/* overflow settings-------------------------------------------------------- */
+.ox-hidden{
+    overflow-x: hidden;
+}
+
+
+/* transform------------------------------------------------- */
+.t-05s{
+    transition: .5s;
+}
+.t-1s{
+    transition: 1s;
+}
+.t-2s{
+    transition: 2s;
+}
+.ease{   
+    animation-timing-function: ease;
+}
+
+.ts{
+    transform: translateX(0%);
+    display: none;
+}
+.ts-hidden{
+    transform: translateX(-100%);
+    display: block;
+    transition-timing-function: ease,step-end;
+
+}
+
+/* sidebar transform------------------------------------------ */
+
+.movetoleft {
+    transition: transform 1s;
+    transform : translateX(-100%) !important;
+ }
+ 
+ .movetoscreen {
+    transition: transform 1s;
+    transform : translateX(0%) !important;
+ }
+ 
+ .movetoright {
+    transition: transform 1s;
+    transform : translateX(100%) !important;
+ }
+
+
+/* --------------------------3d reveal from bottom------------------------------ */
+@keyframes loginanim {
+    0% {
+        transform: translate3d(0%, 500%, -800px) rotateX(-100deg);
+        opacity  : 1;
+    }
+
+    100% {
+        transform: scale(1) translate3d(0, 0) rotateX(0deg);
+        opacity  : 1;
+    }
+}
+
+@keyframes loginanim-reverse {
+    0% {
+        transform: scale(1) translate3d(0, 0) rotateX(0deg);
+        opacity  : 1;
+    }
+
+    100% {
+        transform: translate3d(0%, 500%, -800px) rotateX(-100deg);
+        opacity  : 1;
+    }
+
+}
+
+.loginanim {
+    animation: loginanim 1s ease-out;
+}
+
+.loginanim-reverse {
+    animation: loginanim-reverse 1s ease-in;
+}
+
+/* --------------------------opacity------------------------------ */
+@keyframes opacityanim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityanim-reverse {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.opacityanim {
+    animation: opacityanim 1s ease;
+}
+
+.opacityanim-reverse {
+    animation: opacityanim-reverse 1s ease;
+}
+
+/* --------------------------roll anim------------------------------ */
+@keyframes fromrightanim {
+    0%{
+        transform: perspective(300px) translateX(40%);
+        opacity: 0;
+    }
+    100%{
+        transform: perspective(300px) translateX(0px);
+        opacity: 1;
+    }
+}
+.fromrightanim{
+    animation: fromrightanim 2s ease-out ;
+}
+@keyframes fromleftanim {
+    0%{
+        transform: perspective(300px) translateX(-40%);
+        opacity: 0;
+    }
+    100%{
+        transform: perspective(300px) translateX(0px);
+        opacity: 1;
+    }
+}
+.fromleftanim{
+    animation: fromleftanim 2s ease-out ;
+}
+@keyframes zoomout0 {
+    0%{
+        transform: perspective(300px) scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: perspective(300px) scale(1);
+        opacity: 1;
+    }
+}
+.zoom-out-0{
+    animation: zoomout0 2s ease-out ;
+}
+
+@keyframes sidebaranim {
+    0%{
+        transform: perspective(300px) translateX(-40%);
+        opacity: 0;
+    }
+    100%{
+        transform: perspective(300px) translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes sidebaranim-reverse {
+    0%{
+        transform: perspective(300px) translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: perspective(300px) translateX(-40%);
+        opacity: 0;
+    }
+}
+.sidebaranim{
+    animation: sidebaranim 0.5s ease-out ;
+}
+.sidebaranim-reverse{
+    animation: sidebaranim-reverse 0.5s ease-out ;
+}
+
+
+/* scroll effect--------------------------------------------------------- */
+.reveal {
+    position  : relative;
+    transform :  translateY(70px) rotateX(50deg);
+    transform-origin: top;
+    opacity   : 0.5;
+    transition: all 1s ease-out;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity  : 1;
+}
+
